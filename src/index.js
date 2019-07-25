@@ -10,7 +10,7 @@ mongoose.connect('mongodb+srv://dede:dede@cluster0-odbya.mongodb.net/test?retryW
   useNewUrlParser: true
 });
 
-app.use(require('./routes'));
+app.use('/api', require('./routes'));
 
 let port = process.env.PORT;
 
