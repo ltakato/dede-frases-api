@@ -12,5 +12,11 @@ module.exports = {
     const frase = await Frase.create({ texto, significado });
 
     return res.json(frase);
+  },
+
+  async delete(req, res) {
+    await Frase.remove({ _id: req.params.id });
+
+    return res.json({});
   }
 };
